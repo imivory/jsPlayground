@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h2>사용자가 입력한 수들의 갯수와 합을 구하는 프로그램을 작성해 봅시다. (단 0을 입력받으면 입력 종료)</h2>
+    <script>    
+        var sum = 0;
+        var n = -1;
+        var count = -1;
+        while (n != 0) {
+            n = Number(prompt("숫자를 입력해주세요 (0 === 종료)"));
+            sum += n;
+            count++;
+            console.log(count,n,sum);
+        }
+        document.write("입력한 " +  count + "수의 합은 " +  sum + "입니다.");
+    </script>    
+</body>
+</html>
