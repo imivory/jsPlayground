@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gugudan 8</title>
+</head>
+<body>
+    출력할 단 : <input type="text" id="num">
+    <button onclick="display()">확인</button>
+    <script>
+        function display(){
+            var strN = document.getElementById("num").value;
+            var n1 = Number(strN);
+            if (n1 < 2 || n1 > 9) {
+                document.write("숫자를 2이상 9이하의 숫자를 입력해주세요!");
+            } else {
+                document.write("<h2>"+n1+"단</h2><br>");
+                for(var i=1;i<=9;i++){
+                    var ret = n1 * i;
+                    document.write(n1+"*"+i+"="+ret+"<br>");
+                }
+            }
+         }
+    </script>
+</body>
+</html>
