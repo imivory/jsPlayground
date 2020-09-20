@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var m1 = {
+            "name" : "hoi",
+            "hp":100,
+            "power":10,
+            "attack":function(target){
+                target.hp -= this.power;
+            }
+        };
+        m1.attack(m1);
+        //json 표기법
+    </script>
+</body>
+</html>
