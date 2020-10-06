@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var Human = function(name, hp, power) {
+            this.name = name; 
+            this.hp = hp;
+            this.power = power;
+            this.attack = function(target) {
+                target.hp -= this.power;
+            };
+            this.show = function() {
+                console.log("%s %d %d",
+                this.name, this.hp, this.power);
+            };
+        };
+        var m1 = new Human("Honux", 100, 10);
+        var m2 = new Human("Crong", 999, 1);
+        
+        var Food = function(name,energy){
+            this.name = name;
+            this.energy = energy;
+            this.eat = function(human){
+                human.hp += this.energy;
+            };
+        };
+        var d = new Food("dounet",10);
+        // d.eat(m1);
+        // m1.show();
+    </script>
+</body>
+</html>
