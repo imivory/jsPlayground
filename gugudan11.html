@@ -6,18 +6,33 @@
     <title>99dan</title>
 </head>
 <body>
+    <h1>구구단 완결편</h1>
     <script>
     var gugudan = {};
     gugudan.result = [];
+    gugudan.current = -1; // 마지막으로 계산했던 단의 정보
     gugudan.calculate = function(n) {
-        for(var i=9;i<9;i++){
-            this.result[i] = ni;
-            for(var j=1;j<=9;j++){
-
-            }
+        this.current = n;
+        for(var i=0;i<9;i++){
+            this.result[i] = n * (i + 1);
         }
-    }
-    function main();
+    };
+    gugudan.print = function(){
+        document.write("<h2>"+this.current+"</h2>")
+        for(var i = 0; i < 9; i++ ){
+            var x = this.current;
+            var t = i+1;
+            var y = this.result[i];
+            document.write(x+"*"+t+"="+y+"<br>");
+        }
+    };
+    function main(){
+        for(var i = 2; i <= 9; i++){
+            gugudan.calculate(i);
+            gugudan.print();
+        }
+    };
+    main();
     </script> 
 </body>
 </html>
