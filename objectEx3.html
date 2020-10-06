@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 객체를 변수에 할당하면 참조 변수가 되고, 기본 타입을 변수에 할당하면 일반 변수가 됩니다.
+        // 값 전달
+var foo_v = function(v) {
+    v = v * 2;
+    console.log(v);
+}
+
+var a = 10;
+foo_v(a);
+console.log(a);
+
+
+// 참조 전달
+var foo_r = function(ref) {
+    ref.v = ref.v * 2;
+    console.log(ref);
+}
+
+var p = {name: "Dora", v: 99};
+foo_r(p);
+console.log(p);
+
+// 추가1 
+p1 = {
+	"name" : "honux",
+	"w" : 67
+}
+var diet = function(people){
+	people.w -= 1;
+	console.log("%s %d", people.name, people.w);
+};
+diet(p1;)
+
+// 추가2
+
+function Human(name, hp, mp, power) {
+  this.name = name; //m1.name = name;
+  this.hp = hp;
+  this.mp = mp;
+  this.power = power;
+}
+// 어택을 따로 빼둠
+Human.prototype.attack = function(target) {
+    target.hp -= this.power;
+};
+
+//배열, 객체와 참조변수
+//객체를 변수에 할당하면 그 변수는 참조 변수가 됩니다. 배열도 객체이므로 배열을 변수에 할당하면 역시 참조 변수가 됩니다. 
+//함수 호출시 참조 변수를 매개 변수로 전달하면 함수 내부에서 변경한 값이 외부에서도 변경된다는 것 꼭 기억하세요.
+    </script>
+</body>
+</html>
