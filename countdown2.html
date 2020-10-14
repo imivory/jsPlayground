@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var countdown = function(n){
+            for(let i = n; i > 0; i--){
+                console.log(i);
+            }
+            console.log("Fire!");
+        }
+        
+        // 재귀함수는 종료조건이 반드시 필요하다
+
+        var countdownr = function(n){
+            console.log(n);
+            if(n <= 0){
+                console.log("땡");
+                return;
+            }
+            console.log(n);
+            countdownr(n-1);
+        }
+        countdownr(10);
+    </script>
+</body>
+</html>

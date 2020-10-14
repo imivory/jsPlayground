@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 재귀? : 함수가 함수 안에서 자신을 호출하는 것
+        /*
+            var foo = function(){
+                foo();
+            }
+        */
+        var countdown = function(n){
+            for(let i = n; i > 0; i--){
+                console.log(i);
+            }
+            console.log("Fire!");
+        }
+        countdown(10);
+    </script>
+</body>
+</html>
