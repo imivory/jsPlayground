@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>재귀로 피보나치 수열을 구현하기</title>
+</head>
+<body>
+    <script>
+        var arr =[0, 1];
+
+        function fibo_d(n) {
+            if(arr[n] == undefined) {
+                arr[n] = fibo_d(n - 1) + fibo_d(n - 2);
+                }
+            return arr[n];
+        }
+    </script>
+</body>
+</html>
