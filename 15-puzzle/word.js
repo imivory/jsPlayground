@@ -13,7 +13,7 @@ game.choice = function(){
 var answer = game.choice();
 word1.innerHTML = answer;
 
-game.word = answer.split("");
+game.word = answer.split('');
 game.btns = [];
 
 game.updateDisplay = function(){
@@ -31,6 +31,13 @@ for (var i = 0; i < answer.length; i++) {
     game.btns.push(btn);
 }
 
+
+game.copyBtnText = function(){
+    for (var i = 0; i < game.word.length; i++){
+        this.btns[i].innerHTML = this.word[i];
+    }
+};
+
 var swap = function (event) {
     var temp = [];
     while(game.word.length != 0){
@@ -40,12 +47,6 @@ var swap = function (event) {
     game.word = temp;
     game.copyBtnText();
     game.updateDisplay();
-};
-
-game.copyBtnText = function(){
-    for (var i = 0; i < game.word.length; i++){
-        this.btns[i].innerHTML = this.word[i];
-    }
 };
 
 var rshift = function (event) {
